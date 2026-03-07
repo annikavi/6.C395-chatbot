@@ -38,10 +38,10 @@ def create_chatbot():
             return response
             
         except Exception as e:
-            # Handle potential 503 errors or API timeouts gracefully
-            if "503" in str(e):
-                return "The model is currently busy (503 Error). Please wait a few seconds and try again!"
-            return f"An error occurred: {str(e)}"
+            # repr(e) provides the full technical class name and message
+            error_detail = repr(e) 
+            print(f"FULL DEBUG ERROR: {error_detail}") # Check your terminal for this!
+            return f"TECHNICAL ERROR: {error_detail}"
 
     # Create Gradio interface. 
     # Customized for the MIT Course Catalog context.
