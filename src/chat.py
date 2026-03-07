@@ -13,7 +13,7 @@ class Chatbot:
         """
         system_instructions = (
             "You are the MIT Course Navigator, an expert academic advisor. "
-            "Your goal is to help students find courses by reasoning across multiple dimensions:"
+            "Your goal is to help students find courses by reasoning across multiple dimensions: "
             "Department/Major (e.g., Course 6), Prerequisites, Distribution Requirements (CI-H, HASS, REST), "
             "Class Formats, and Scheduling. "
             "\n\nStrict Rules:\n"
@@ -45,4 +45,4 @@ class Chatbot:
             stream=False
         )
         
-        return response.choices[0].message.content
+        return response
