@@ -25,53 +25,39 @@ def create_chatbot():
     """
     Creates and configures the chatbot interface.
     """
+    # Initialize your Chatbot instance
     chatbot = Chatbot()
     
     def chat(message, history):
         """
-        TODO:Generate a response for the current message in a Gradio chat interface.
-        
-        This function is called by Gradio's ChatInterface every time a user sends a message.
-        You only need to generate and return the assistant's response - Gradio handles the
-        chat display and history management automatically.
-
-        Args:
-            message (str): The current message from the user
-            history (list): List of previous message pairs, where each pair is
-                           [user_message, assistant_message]
-                           Example:
-                           [
-                               ["What schools offer Spanish?", "The Hernandez School..."],
-                               ["Where is it located?", "The Hernandez School is in Roxbury..."]
-                           ]
-
-        Returns:
-            str: The assistant's response to the current message.
-
-
-        Note:
-            - Gradio automatically:
-                - Displays the user's message
-                - Displays your returned response
-                - Updates the chat history
-                - Maintains the chat interface
-            - You only need to:
-                - Generate an appropriate response to the current message
-                - Return that response as a string
+        Generates a response for the MIT Course Catalog assistant.
         """
-        # TODO: Generate and return response
-        pass
+        try:
+            # Call the get_response method from your Chatbot class
+            response = chatbot.get_response(message)
+            return response
+            
+        except Exception as e:
+            # repr(e) provides the full technical class name and message
+            error_detail = repr(e) 
+            print(f"FULL DEBUG ERROR: {error_detail}") # Check your terminal for this!
+            return f"TECHNICAL ERROR: {error_detail}"
 
-    
-    
-    # Create Gradio interface. Customize the interface however you'd like!
+    # Create Gradio interface. 
+    # Customized for the MIT Course Catalog context.
     demo = gr.ChatInterface(
         chat,
-        title="6.C395",
-        description="Ask me anything about [topic]! Since I am a free tier chatbot, I may give a 503 error when I'm busy. If that happens, please try again a few seconds later.",
+        title="MIT Course Navigator (6.C395)",
+        description=(
+            "I'm your AI Academic Advisor. Ask me about MIT courses, "
+            "CI-H requirements, or finding classes that fit your 6-3 schedule."
+        ),
         examples=[
-            "What options are available for someone in my situation?"
-        ]
+            "I'm a 6-3 junior who needs a CI-H, prefers afternoon classes, and is interested in AI ethics.",
+            "What are some REST requirements for a Course 8 major?",
+            "I need a HASS-S course that doesn't have 8:00 AM lectures."
+        ],
+        # theme="soft" # Optional: gives it a cleaner, modern look
     )
     
     return demo

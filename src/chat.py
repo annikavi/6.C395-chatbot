@@ -2,60 +2,47 @@ from huggingface_hub import InferenceClient
 from config import BASE_MODEL, MY_MODEL, HF_TOKEN
 
 class Chatbot:
-    """
-    This class is extra scaffolding around a model. Modify this class to specify how the model recieves prompts and generates responses.
-
-    Example usage:
-        chatbot = Chatbot()
-        response = chatbot.get_response("What options are available for me?")
-    """
-
     def __init__(self):
-        """
-        Initialize the chatbot with a HF model ID
-        """
-        model_id = MY_MODEL if MY_MODEL else BASE_MODEL # define MY_MODEL in config.py if you create a new model in the HuggingFace Hub
+        model_id = MY_MODEL if MY_MODEL else BASE_MODEL
         self.client = InferenceClient(model=model_id, token=HF_TOKEN)
         
     def format_prompt(self, user_input):
         """
-        TODO: Implement this method to format the user's input into a proper prompt.
-        
-        This method should:
-        1. Add any necessary system context or instructions
-        2. Format the user's input appropriately
-        3. Add any special tokens or formatting the model expects
-
-        Args:
-            user_input (str): The user's question
-
-        Returns:
-            str: A formatted prompt ready for the model
-        
-        Example prompt format:
-            "You are a helpful assistant that specializes in...
-             User: {user_input}
-             Assistant:"
+        Formats the input using Llama 3.1 chat templates to ensure the 
+        model stays in 'Advisor Mode'.
         """
-        pass
+        system_instructions = (
+            "You are the MIT Course Navigator, an expert academic advisor. "
+            "Your goal is to help students find courses by reasoning across multiple dimensions: "
+            "Department/Major (e.g., Course 6), Prerequisites, Distribution Requirements (CI-H, HASS, REST), "
+            "Class Formats, and Scheduling. "
+            "\n\nStrict Rules:\n"
+            "1. If a student mentions a specific requirement (like CI-H), prioritize those.\n"
+            "2. Always check for prerequisite conflicts if the student mentions their year.\n"
+            "3. If timing is mentioned (e.g., 'afternoon'), filter results accordingly.\n"
+            "4. Be concise, professional, and encouraging."
+        )
+        
+        # Llama 3.1 Chat Format
+        prompt = f"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{system_instructions}<|eot_id|>"
+        prompt += f"<|start_header_id|>user<|end_header_id|>\n\n{user_input}<|eot_id|>"
+        prompt += f"<|start_header_id|>assistant<|end_header_id|>\n\n"
+        
+        return prompt
         
     def get_response(self, user_input):
         """
-        TODO: Implement this method to generate responses to user questions.
-        
-        This method should:
-        1. Use format_prompt() to prepare the input
-        2. Generate a response using the model
-        3. Clean up and return the response
-
-        Args:
-            user_input (str): The user's question
-
-        Returns:
-            str: The chatbot's response
-
-        Implementation tips:
-        - Use self.format_prompt() to format the user's input
-        - Use self.client to generate responses
+        Generates a response using the formatted prompt.
         """
-        pass
+        formatted_input = self.format_prompt(user_input)
+        
+        # We switch to chat_completion to fix the Novita/Provider error.
+        # We pass your 'already-formatted' prompt as the content.
+        response = self.client.chat_completion(
+            messages=[{"role": "user", "content": formatted_input}],
+            max_tokens=500,
+            temperature=0.7,
+            stream=False
+        )
+        
+        return response
