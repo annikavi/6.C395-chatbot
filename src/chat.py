@@ -46,4 +46,3 @@ class Chatbot:
         )
         
         return response
-chat.py

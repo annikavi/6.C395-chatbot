@@ -1,23 +1,3 @@
-"""
-Gradio Web Interface for Boston School Chatbot
-
-This script creates a web interface for your chatbot using Gradio.
-You only need to implement the chat function.
-
-Key Features:
-- Creates a web UI for your chatbot
-- Handles conversation history
-- Provides example questions
-- Can be deployed to Hugging Face Spaces
-
-Example Usage:
-    # Run locally:
-    python app.py
-    
-    # Access in browser:
-    # http://localhost:7860
-"""
-
 import gradio as gr
 from src.chat import Chatbot
 
@@ -27,7 +7,7 @@ def create_chatbot():
     """
     # Initialize your Chatbot instance
     chatbot = Chatbot()
-    
+
     def chat(message, history):
         """
         Generates a response for the MIT Course Catalog assistant.
@@ -36,7 +16,7 @@ def create_chatbot():
             # Call the get_response method from your Chatbot class
             response = chatbot.get_response(message)
             return response
-            
+
         except Exception as e:
             # Handle potential 503 errors or API timeouts gracefully
             if "503" in str(e):
@@ -59,9 +39,9 @@ def create_chatbot():
         ],
         # theme="soft" # Optional: gives it a cleaner, modern look
     )
-    
+
     return demo
 
-if __name__ == "__main__":
+if name == "main":
     demo = create_chatbot()
     demo.launch()
