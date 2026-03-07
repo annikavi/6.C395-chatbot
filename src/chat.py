@@ -36,13 +36,13 @@ class Chatbot:
         """
         formatted_input = self.format_prompt(user_input)
         
-        # We use simple text_generation here; 
-        # max_new_tokens controls how long the advice can be.
-        response = self.client.text_generation(
-            formatted_input,
-            max_new_tokens=500,
-            temperature=0.7,  # Balanced between creative and factual
-            stop=["<|eot_id|>"]
+        # We switch to chat_completion to fix the Novita/Provider error.
+        # We pass your 'already-formatted' prompt as the content.
+        response = self.client.chat_completion(
+            messages=[{"role": "user", "content": formatted_input}],
+            max_tokens=500,
+            temperature=0.7,
+            stream=False
         )
         
         return response
