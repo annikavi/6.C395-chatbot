@@ -60,7 +60,7 @@ def create_chatbot():
                 - Return that response as a string
         """
         # TODO: Generate and return response
-        pass
+        return chatbot.get_response(message, history)
 
     
     
