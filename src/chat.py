@@ -37,7 +37,7 @@ class Chatbot:
              User: {user_input}
              Assistant:"
         """
-        pass
+        return user_input
         
     def get_response(self, user_input):
         """
@@ -58,4 +58,27 @@ class Chatbot:
         - Use self.format_prompt() to format the user's input
         - Use self.client to generate responses
         """
-        pass
+        # TODO: use tools to go to the course catalog
+        try:
+            formatted_input = self.format_prompt(user_input)
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that specializes in MIT Course Catalog. \
+                    The catalog contains hundreds of courses, each with prerequisites, schedules, \
+                    departments, distribution requirements (CI-H, HASS, REST), instructors, \
+                    and class formats. A student might say “I’m a 6-3 junior who needs a CI-H, \
+                    prefers afternoon classes, and am interested in AI ethics” and you need to reason \
+                    across all of those dimensions. You should help students find courses that match \
+                    their constraints and interests. Do not try to immediately give suggestions. If the instructions are unclear, \
+                    ask more questions to be able to give better suggestions"},
+                {"role": "user", "content": formatted_input},
+            ]
+            output = self.client.chat.completions.create(
+                        model="meta-llama/Meta-Llama-3-8B-Instruct",
+                        messages=messages,
+                        max_tokens=1024,
+                    )
+            response = output.choices[0].message.content
+
+            return response
+        except Exception as e:
+            return f"Error: {str(e)}"

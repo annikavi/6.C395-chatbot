@@ -11,6 +11,6 @@ BASE_MODEL = "meta-llama/Llama-3.1-8B-Instruct"
 # MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
 
 # If you finetune the model or change it in any way, save it to huggingface hub, then set MY_MODEL to your model ID. The model ID is in the format "your-username/your-model-name".
-MY_MODEL = None
+MY_MODEL = "meta-llama/Meta-Llama-3-8B-Instruct"
 
 HF_TOKEN = os.getenv("HF_TOKEN")
