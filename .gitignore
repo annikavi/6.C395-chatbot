@@ -1,7 +1,9 @@
 venv/
+venv-6c895a1/
 __pycache__/
 .env
 *.pyc
 .ipynb_checkpoints/
 models/
 .gitattributes
+.DS_Store
