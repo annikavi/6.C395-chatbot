@@ -60,6 +60,7 @@ def create_chatbot():
                 - Return that response as a string
         """
         # TODO: Generate and return response
+        print(history)
         return chatbot.get_response(message, history)
 
     
@@ -68,7 +69,7 @@ def create_chatbot():
     demo = gr.ChatInterface(
         chat,
         title="6.C395",
-        description="Ask me anything about [topic]! Since I am a free tier chatbot, I may give a 503 error when I'm busy. If that happens, please try again a few seconds later.",
+        description="Ask me anything about the MIT course catalog! Since I am a free tier chatbot, I may give a 503 error when I'm busy. If that happens, please try again a few seconds later.",
         examples=[
             "What options are available for someone in my situation?"
         ]

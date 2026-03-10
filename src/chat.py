@@ -82,6 +82,6 @@ class Chatbot:
         response = self.client.chat_completion(messages=messages, max_tokens=self.MAX_TOKENS)
 
         if not response.choices[0].message.content:
-            return "Sorry! Me cant help you :("
+            return "Sorry! Me can't help you :("
         return response.choices[0].message.content
 
