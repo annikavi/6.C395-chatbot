@@ -1,17 +1,3 @@
----
-title: MIT Course Catalog Chatbot
-emoji: 🎓
-colorFrom: blue
-colorTo: red
-sdk: gradio
-sdk_version: 5.23.3
-python_version: "3.10"
-app_file: app.py
-pinned: false
-secrets:
-  - HF_TOKEN
----
-
 # MIT Course Catalog Chatbot
 
 An AI academic advisor that helps MIT students navigate the course catalog. Ask about distribution requirements (CI-H, HASS, REST, LAB), prerequisites, scheduling, course comparisons, and degree-specific electives.
