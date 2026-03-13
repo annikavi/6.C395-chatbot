@@ -8,10 +8,11 @@ An AI academic advisor that helps MIT students navigate the course catalog. Ask 
 
 **Retrieval** — `src/retriever.py` builds a BM25 index over all ~3000 courses. BM25 handles document length normalisation and term frequency saturation, which matters for matching short student queries against variable-length course descriptions.
 
-**Two-pass RAG pipeline** (`src/chat.py`):
-1. **Preflight** — A fast LLM call reads the student's message and outputs a JSON plan: which web searches to run (only for MIT institutional programs/terms not in the catalog), what BM25 queries to issue, and whether to filter by level (undergrad/grad).
-2. **Gather** — Executes the plan: runs web searches for unfamiliar MIT programs (e.g. TPP, UROP, CRE), runs multiple BM25 queries against the catalog, and exact-matches any course numbers mentioned explicitly.
-3. **Answer** — A second LLM call reasons over the gathered course excerpt and web context to generate the final response.
+**Three-pass RAG pipeline** (`src/chat.py`):
+1. **Profile** — A lightweight LLM pass (`extract_profile_updates`) reads each message and updates a persistent `StudentProfile` (year, major, completed/in-progress courses, remaining requirements, constraints, interests, program context).
+2. **Preflight** — A planning LLM call uses the profile to output a JSON retrieval plan (web searches, catalog queries, level filter), skipping already-known info and tailoring queries to outstanding requirements and constraints.
+3. **Gather** — Executes the plan: runs web searches for unfamiliar MIT programs (e.g. TPP, UROP, CRE), runs multiple BM25 queries against the catalog with filters/boosts driven by the profile (excluding completed/in-progress courses, boosting remaining requirements, respecting semester hints), and exact-matches any course numbers mentioned explicitly.
+4. **Answer** — A final LLM call answers using the profile, catalog excerpt, web context, and evaluation data, applying the student’s stated schedule/workload preferences when ranking and commenting on suggestions.
 
 Web search uses Tavily if `TAVILY_API_KEY` is set, otherwise falls back to DuckDuckGo.
 
