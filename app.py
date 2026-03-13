@@ -183,6 +183,25 @@ def _profile_html(profile_text: str) -> str:
     return "<div style='padding:4px;'>" + "\n".join(rows) + "</div>"
 
 
+def _extract_course_numbers_from_text(text: str) -> list[str]:
+    """
+    Extract plausible MIT course numbers from free text.
+
+    We want things like:
+      - 6.3900, 18.03, 21H.001, 21M.301, 6.1200J
+    but we want to AVOID matching hours like "3.5h" or "4.7h".
+
+    Pattern:
+      - leading: digits with optional uppercase letters (e.g. "21H")
+      - dot:     "."
+      - tail:    1–4 digits with optional uppercase letters (e.g. "3900", "001", "3900J")
+    """
+    if not text:
+        return []
+    pattern = re.compile(r"\b(?:\d+[A-Z]*)\.\d{1,4}[A-Z]*\b")
+    return sorted(set(pattern.findall(text)))
+
+
 # ── Event handlers ────────────────────────────────────────────────────────────
 
 def new_session() -> str:
@@ -265,7 +284,24 @@ def respond(
         print(traceback.format_exc())
 
     new_history = history + [[message, answer]]
-    has_courses = bool(re.findall(r"\b\d+\.\w+\b", answer))
+
+    # Only surface the "Add last suggested..." UI when we have at least one
+    # course number that actually exists in the catalog.
+    nums = _extract_course_numbers_from_text(answer)
+    has_courses = False
+    if nums:
+        try:
+            valid = []
+            for n in nums:
+                try:
+                    if bot.retriever.get_by_number(n):
+                        valid.append(n)
+                except Exception:
+                    continue
+            has_courses = bool(valid)
+        except Exception:
+            has_courses = bool(nums)
+
     return new_history, _profile_html(profile_summary), "", gr.update(visible=has_courses)
 
 
@@ -402,9 +438,20 @@ def sync_schedule_rows(schedule: list) -> tuple:
             return float(int(piece))
 
         def _parse_range(text):
-            m = re.search(r"(\d{1,2}(?::\d{2}|\.\d{2})?)\s*-\s*(\d{1,2}(?::\d{2}|\.\d{2})?)", text)
-            if not m: return None
-            return _parse_t(m.group(1)), _parse_t(m.group(2))
+            # Prefer explicit ranges like "1-2.30"
+            m = re.search(
+                r"(\d{1,2}(?::\d{2}|\.\d{2})?)\s*-\s*(\d{1,2}(?::\d{2}|\.\d{2})?)",
+                text,
+            )
+            if m:
+                return _parse_t(m.group(1)), _parse_t(m.group(2))
+            # Fallback: single time like "MW 12" → treat as 1-hour block.
+            m = re.search(r"\b(\d{1,2}(?::\d{2}|\.\d{2})?)\b", text)
+            if not m:
+                return None
+            start = _parse_t(m.group(1))
+            end = start + 1.0
+            return start, end
 
         events = {d: [] for d in days}
         for c in schedule:
@@ -420,8 +467,14 @@ def sync_schedule_rows(schedule: list) -> tuple:
             evs.sort()
             for i in range(len(evs)):
                 for j in range(i + 1, len(evs)):
-                    if evs[j][0] >= evs[i][1]: break
-                    conflict_nums.add(evs[i][2]); conflict_nums.add(evs[j][2])
+                    if evs[j][0] >= evs[i][1]:
+                        break
+                    # Ignore "self-conflicts" where multiple sections of the same
+                    # course overlap; the student will only take one section.
+                    if evs[i][2] == evs[j][2]:
+                        continue
+                    conflict_nums.add(evs[i][2])
+                    conflict_nums.add(evs[j][2])
     except Exception:
         pass
 
@@ -476,12 +529,20 @@ def update_schedule_display(bot, schedule: list) -> str:
         return float(int(piece))
 
     def parse_range(text: str):
+        # Prefer explicit ranges like "1-2.30"
         m = re.search(
             r"(\d{1,2}(?::\d{2}|\.\d{2})?)\s*-\s*(\d{1,2}(?::\d{2}|\.\d{2})?)",
             text,
         )
-        if not m: return None
-        return parse_time(m.group(1)), parse_time(m.group(2))
+        if m:
+            return parse_time(m.group(1)), parse_time(m.group(2))
+        # Fallback: single time like "MW 12" → treat as 1-hour block.
+        m = re.search(r"\b(\d{1,2}(?::\d{2}|\.\d{2})?)\b", text)
+        if not m:
+            return None
+        start = parse_time(m.group(1))
+        end = start + 1.0
+        return start, end
 
     # Detect conflicts
     conflict_nums: set[str] = set()
@@ -506,8 +567,14 @@ def update_schedule_display(bot, schedule: list) -> str:
         evs.sort()
         for i in range(len(evs)):
             for j in range(i + 1, len(evs)):
-                if evs[j][0] >= evs[i][1]: break
-                conflict_nums.add(evs[i][3]); conflict_nums.add(evs[j][3])
+                if evs[j][0] >= evs[i][1]:
+                    break
+                # Ignore overlaps between multiple sections of the same course;
+                # the student will only enrol in one section.
+                if evs[i][3] == evs[j][3]:
+                    continue
+                conflict_nums.add(evs[i][3])
+                conflict_nums.add(evs[j][3])
 
     # Build per-cell data: grid[(slot_idx, day)] = (num, title, rowspan, is_first_slot)
     # For each event, find the first slot it covers and compute rowspan.
@@ -743,7 +810,7 @@ def add_last_suggested_to_schedule(
             "No assistant message to sync.</div>"
         )) + sync_schedule_rows(current_schedule)
 
-    numbers = sorted(set(re.findall(r"\b\d+\.\w+\b", last_assistant)))
+    numbers = _extract_course_numbers_from_text(last_assistant)
     if not numbers:
         return (current_schedule, (
             "<div style='color:#aaa;font-size:0.9em;'>"
@@ -758,7 +825,12 @@ def add_last_suggested_to_schedule(
     return (schedule, update_schedule_display(bot, schedule)) + sync_schedule_rows(schedule)
 
 
-def pick_suggested_courses(history: list):
+def pick_suggested_courses(session_id: str, history: list):
+    """
+    Populate the checkbox list with only *valid* course numbers present in
+    the catalog index for this session's chatbot.
+    """
+    bot = _get_bot(session_id)
     last_assistant = ""
     if history:
         last_turn = history[-1]
@@ -766,7 +838,17 @@ def pick_suggested_courses(history: list):
             last_assistant = (last_turn[1] or "").strip()
         elif isinstance(last_turn, dict) and last_turn.get("role") == "assistant":
             last_assistant = (last_turn.get("content") or "").strip()
-    nums = sorted(set(re.findall(r"\b\d+\.\w+\b", last_assistant)))
+
+    raw_nums = _extract_course_numbers_from_text(last_assistant)
+    nums: list[str] = []
+    if bot is not None:
+        for n in raw_nums:
+            try:
+                if bot.retriever.get_by_number(n):
+                    nums.append(n)
+            except Exception:
+                continue
+
     return gr.update(choices=nums, value=nums), gr.update(visible=bool(nums))
 
 
@@ -777,13 +859,24 @@ def add_selected_suggested_courses(
     semester: str = "",
 ):
     bot = _get_bot(session_id)
-    if bot is None:
-        schedule = current_schedule or []
-        return (schedule, update_schedule_display(None, schedule)) + sync_schedule_rows(schedule)
     schedule = current_schedule or []
-    for num in (selected_numbers or []):
+
+    if bot is None:
+        # No chatbot/retriever available; just return the current schedule view.
+        return (schedule, update_schedule_display(None, schedule)) + sync_schedule_rows(schedule)
+
+    # Normalise selection: Gradio can sometimes pass a single string instead of a list.
+    nums = selected_numbers or []
+    if isinstance(nums, str):
+        nums = [nums]
+
+    for num in nums:
+        if not num:
+            continue
+        # Reuse the same logic as manual add, but keep the evolving schedule.
         result = add_course_to_schedule(session_id, num, schedule, semester)
         schedule = result[0]
+
     return (schedule, update_schedule_display(bot, schedule)) + sync_schedule_rows(schedule)
 
 
@@ -1083,7 +1176,7 @@ def build_ui():
         )
 
         # ── Advisor tab wiring ────────────────────────────────────────────────
-        add_last_btn.click(fn=pick_suggested_courses, inputs=[chatbox], outputs=[suggested_courses_cb, add_picker], api_name=False)
+        add_last_btn.click(fn=pick_suggested_courses, inputs=[session_id, chatbox], outputs=[suggested_courses_cb, add_picker], api_name=False)
         close_picker_btn.click(fn=lambda: gr.update(visible=False), inputs=[], outputs=[add_picker], api_name=False)
         add_selected_btn.click(
             fn=add_selected_suggested_courses,

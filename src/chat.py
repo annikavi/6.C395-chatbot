@@ -130,6 +130,11 @@ schedule, interests, and workload preferences.
 - Each course should have a single, non-redundant rationale line tied to the student's constraints.
 - If you need additional info to answer (e.g., ambiguous acronyms), ask 1–2 short clarifying questions instead of guessing.
 
+## Output formatting constraints
+- The UI already displays the student's profile (completed courses, in-progress, requirements, schedule/workload).
+- Do NOT print profile summaries or headings like "Completed Courses:", "In Progress:", "Requirements:", or "Schedule/Workload:" in your answer.
+- Do NOT repeat your previous full answer before giving a new one; respond only to the latest user message.
+
 ## Handling "CRE" questions (Course Restricted Elective)
 - "CRE" is program-specific. If the student's program/track and allowed CRE list is not in WEB CONTEXT, you MUST ask:
   1) Which program (e.g., TPP / IDS / SDM / LGO / other) and which track, if any?
@@ -143,10 +148,24 @@ When a course has evaluation data, interpret it as:
   👨‍🏫 Instructor rating: X/7 — teaching quality
   📊 Response rate: X% — reliability (below 30% means fewer responses, interpret cautiously)
 
+When you justify why a course is a good fit, **explicitly reference the numeric
+evaluation stats when available** rather than vague phrases. For example:
+- Prefer: "⭐ 6.6/7 overall, ⏱ 4.7h/week outside class (moderate workload)."
+- Avoid:  "good rating and reasonable hours/week."
+
 ## MIT Schedule Notation
 Day codes: M=Mon, T=Tue, W=Wed, R=Thu, F=Fri
 Example: "Lec: TR 1-2:30 (34-101)" = lecture Tue+Thu 1:00-2:30pm in room 34-101
 When presenting a schedule, list each course ONCE with days and times.
+
+When the student asks you to **build a schedule** (e.g. "build me a fall schedule"
+or "make a plan with X courses"), you MUST:
+- Explicitly check for time overlaps between your recommended courses using the
+  parsed schedule strings.
+- Prefer a set of courses with **no conflicts at all**; only include a conflicting
+  combination if there is no way to satisfy the constraints otherwise.
+- If you do include any conflicting courses, clearly flag which ones conflict,
+  on which days and time ranges, and suggest concrete alternatives or tradeoffs.
 
 ## MIT Degree Requirements Reference
 **GIRs**: Science Core (18.01, 18.02, 8.01, 8.02, Chemistry, Biology), REST (2), HASS (8), LAB (1), PE (4)
@@ -456,14 +475,26 @@ class Chatbot:
                 temperature=0.0,
             )
             raw = resp.choices[0].message.content.strip()
+
+            # Strip Markdown fences if the model ignored the "no fences" rule.
             if raw.startswith("```"):
                 raw = re.sub(r"^```\w*\n?", "", raw)
                 raw = re.sub(r"\n?```$", "", raw)
-            plan = json.loads(raw)
+
+            # Be resilient to extra prose around the JSON by extracting the
+            # first JSON object we can find. This avoids failures like
+            # "Unterminated string" when the model appends stray text.
+            candidate = raw
+            start = candidate.find("{")
+            end = candidate.rfind("}")
+            if start != -1 and end != -1 and end > start:
+                candidate = candidate[start : end + 1]
+
+            plan = json.loads(candidate)
             print(f"[Preflight] Plan: {json.dumps(plan, indent=2)}")
             return plan
         except Exception as e:
-            print(f"[Preflight] Failed ({e}), using fallback")
+            print(f"[Preflight] Failed ({e}), using fallback. Raw preflight: {raw!r}")
             return {
                 "web_searches": [],
                 "catalog_queries": [message],
