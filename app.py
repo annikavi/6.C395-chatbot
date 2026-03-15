@@ -237,7 +237,7 @@ def respond(
             "⚠️ **Chatbot failed to start.** Check your terminal for the error.\n\n"
             f"```\n{_init_error[:600]}\n```"
         )
-        return history + [[message, err]], _profile_html(""), "", gr.update(visible=False)
+        return history + [{"role": "user", "content": message}, {"role": "assistant", "content": err}], _profile_html(""), "", gr.update(visible=False)
 
     bot = _get_bot(session_id)
     if bot is None:
@@ -246,7 +246,7 @@ def respond(
             "Make sure `data/courses.json` exists (run `python -m src.scraper` first) "
             "and your HuggingFace token is set in `config.py`."
         )
-        return history + [[message, err]], _profile_html(""), "", gr.update(visible=False)
+        return history + [{"role": "user", "content": message}, {"role": "assistant", "content": err}], _profile_html(""), "", gr.update(visible=False)
 
     try:
         prefs_parts: list[str] = []
@@ -283,7 +283,7 @@ def respond(
             profile_summary = ""
         print(traceback.format_exc())
 
-    new_history = history + [[message, answer]]
+    new_history = history + [{"role": "user", "content": message}, {"role": "assistant", "content": answer}]
 
     # Only surface the "Add last suggested..." UI when we have at least one
     # course number that actually exists in the catalog.
@@ -1014,7 +1014,7 @@ TIPS_HTML = """<div class="tips-box"><strong>💡 Tips</strong><br>
 # ── Build UI ──────────────────────────────────────────────────────────────────
 
 def build_ui():
-    with gr.Blocks(css=CSS, title="MIT Course Advisor") as demo:
+    with gr.Blocks(title="MIT Course Advisor") as demo:
 
         session_id = gr.State("")
 
@@ -1047,7 +1047,6 @@ def build_ui():
                             height=520,
                             elem_classes="chatbot-area",
                             show_label=False,
-                            bubble_full_width=False,
                             render_markdown=True,
                         )
                         gr.HTML(CHIPS_HTML)
@@ -1206,4 +1205,4 @@ def build_ui():
 
 if __name__ == "__main__":
     app = build_ui()
-    app.launch(share=True)
+    app.launch(share=True, css=CSS)
