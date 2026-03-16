@@ -1,3 +1,9 @@
+---
+title: 6.C395-chatbot
+app_file: app.py
+sdk: gradio
+sdk_version: 6.9.0
+---
 # MIT Course Catalog Chatbot
 
 An AI academic advisor that helps MIT students navigate the course catalog. Ask about distribution requirements (CI-H, HASS, REST, LAB), prerequisites, scheduling, course comparisons, and degree-specific electives.

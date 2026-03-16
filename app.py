@@ -237,7 +237,7 @@ def respond(
             "⚠️ **Chatbot failed to start.** Check your terminal for the error.\n\n"
             f"```\n{_init_error[:600]}\n```"
         )
-        return history + [[message, err]], _profile_html(""), "", gr.update(visible=False)
+        return history + [{"role": "user", "content": message}, {"role": "assistant", "content": err}], _profile_html(""), "", gr.update(visible=False)
 
     bot = _get_bot(session_id)
     if bot is None:
@@ -246,7 +246,7 @@ def respond(
             "Make sure `data/courses.json` exists (run `python -m src.scraper` first) "
             "and your HuggingFace token is set in `config.py`."
         )
-        return history + [[message, err]], _profile_html(""), "", gr.update(visible=False)
+        return history + [{"role": "user", "content": message}, {"role": "assistant", "content": err}], _profile_html(""), "", gr.update(visible=False)
 
     try:
         prefs_parts: list[str] = []
@@ -283,7 +283,7 @@ def respond(
             profile_summary = ""
         print(traceback.format_exc())
 
-    new_history = history + [[message, answer]]
+    new_history = history + [{"role": "user", "content": message}, {"role": "assistant", "content": answer}]
 
     # Only surface the "Add last suggested..." UI when we have at least one
     # course number that actually exists in the catalog.
