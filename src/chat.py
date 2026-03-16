@@ -68,6 +68,8 @@ BM25 keyword strings. MIT dept → number prefix:
 If the student has outstanding requirements (from their profile), include
 those tags in your queries to retrieve matching courses.
 Make queries DIVERSE — different angles of the same request.
+Keep each query SHORT (a few keywords, e.g. "CI-H writing" or "REST math").
+Do NOT list many course numbers in a query; the retriever does matching.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RULE 3 — level_filter
@@ -471,7 +473,7 @@ class Chatbot:
         try:
             resp = self.client.chat_completion(
                 messages=preflight_messages,
-                max_tokens=350,
+                max_tokens=600,
                 temperature=0.0,
             )
             raw = resp.choices[0].message.content.strip()

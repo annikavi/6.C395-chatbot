@@ -237,7 +237,7 @@ def respond(
             "⚠️ **Chatbot failed to start.** Check your terminal for the error.\n\n"
             f"```\n{_init_error[:600]}\n```"
         )
-        return history + [{"role": "user", "content": message}, {"role": "assistant", "content": err}], _profile_html(""), "", gr.update(visible=False)
+        return history + [[message, err]], _profile_html(""), "", gr.update(visible=False)
 
     bot = _get_bot(session_id)
     if bot is None:
@@ -246,7 +246,7 @@ def respond(
             "Make sure `data/courses.json` exists (run `python -m src.scraper` first) "
             "and your HuggingFace token is set in `config.py`."
         )
-        return history + [{"role": "user", "content": message}, {"role": "assistant", "content": err}], _profile_html(""), "", gr.update(visible=False)
+        return history + [[message, err]], _profile_html(""), "", gr.update(visible=False)
 
     try:
         prefs_parts: list[str] = []
@@ -254,7 +254,7 @@ def respond(
             prefs_parts.append(time_pref)
         if workload_pref and workload_pref != "No preference":
             prefs_parts.append(workload_pref)
-        if max_hours is not None:
+        if max_hours is not None and max_hours > 0:
             prefs_parts.append(f"max {int(max_hours)} hours/week outside class")
         if prefs_text and prefs_text.strip():
             prefs_parts.append(prefs_text.strip())
@@ -283,7 +283,7 @@ def respond(
             profile_summary = ""
         print(traceback.format_exc())
 
-    new_history = history + [{"role": "user", "content": message}, {"role": "assistant", "content": answer}]
+    new_history = history + [[message, answer]]
 
     # Only surface the "Add last suggested..." UI when we have at least one
     # course number that actually exists in the catalog.
@@ -336,7 +336,7 @@ def preview_profile(
             prefs_parts.append(time_pref)
         if workload_pref and workload_pref != "No preference":
             prefs_parts.append(workload_pref)
-        if max_hours is not None:
+        if max_hours is not None and max_hours > 0:
             prefs_parts.append(f"max {int(max_hours)} hours/week outside class")
         if prefs_text and prefs_text.strip():
             prefs_parts.append(prefs_text.strip())
@@ -1112,7 +1112,7 @@ def build_ui():
                             )
                             max_hours = gr.Slider(
                                 minimum=0, maximum=20, value=0, step=1,
-                                label="Max hours/week outside class (0 = ignore)",
+                                label="Max hours/week outside class (0 = N/A)",
                             )
                             prefs_tb = gr.Textbox(
                                 label="Other constraints (free text)",
@@ -1205,4 +1205,4 @@ def build_ui():
 
 if __name__ == "__main__":
     app = build_ui()
-    app.launch(share=True, css=CSS)
+    app.launch(share=True)
