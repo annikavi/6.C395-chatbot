@@ -5,3 +5,7 @@ __pycache__/
 .ipynb_checkpoints/
 models/
 .gitattributes
+.gradio/
+.claude/
+# Scraped catalog data — regenerate with: python -m src.scraper
+# data/courses.json
