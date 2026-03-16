@@ -1,86 +1,101 @@
 {
-  "n_prompts": 100,
+  "n_prompts": 20,
   "summary": {
     "cited_courses_exist": {
-      "passed": 100,
-      "total": 100,
+      "passed": 20,
+      "total": 20,
       "pass_rate": 1.0
     },
     "not_overwhelming": {
-      "passed": 100,
-      "total": 100,
-      "pass_rate": 1.0
+      "passed": 17,
+      "total": 20,
+      "pass_rate": 0.85
     },
     "explains_recommendations": {
-      "passed": 1,
-      "total": 100,
-      "pass_rate": 0.01
+      "passed": 12,
+      "total": 20,
+      "pass_rate": 0.6
     },
     "articulates_tradeoffs": {
       "passed": 0,
-      "total": 100,
+      "total": 20,
       "pass_rate": 0.0
     },
     "expresses_uncertainty": {
       "passed": 0,
-      "total": 100,
+      "total": 20,
       "pass_rate": 0.0
     },
     "mentions_departments_or_distributions": {
-      "passed": 1,
-      "total": 100,
-      "pass_rate": 0.01
+      "passed": 13,
+      "total": 20,
+      "pass_rate": 0.65
     },
     "recognizes_course_6_or_eecs": {
-      "passed": 0,
-      "total": 100,
-      "pass_rate": 0.0
+      "passed": 7,
+      "total": 20,
+      "pass_rate": 0.35
     },
     "have_distribution": {
-      "passed": 1,
-      "total": 37,
-      "pass_rate": 0.02702702702702703
+      "passed": 12,
+      "total": 13,
+      "pass_rate": 0.9230769230769231
     },
     "suggests_no_results_or_relax": {
       "passed": 0,
-      "total": 100,
+      "total": 20,
       "pass_rate": 0.0
     },
     "have_afternoon_option": {
-      "passed": 0,
-      "total": 10,
-      "pass_rate": 0.0
-    },
-    "cited_courses_same_department": {
-      "passed": 0,
-      "total": 37,
-      "pass_rate": 0.0
-    },
-    "are_course_6": {
-      "passed": 0,
-      "total": 33,
-      "pass_rate": 0.0
-    },
-    "offered_in_semester": {
-      "passed": 3,
-      "total": 3,
+      "passed": 1,
+      "total": 1,
       "pass_rate": 1.0
     },
-    "mentions_graduation_or_requirements": {
-      "passed": 0,
-      "total": 2,
-      "pass_rate": 0.0
+    "cited_courses_same_department": {
+      "passed": 7,
+      "total": 7,
+      "pass_rate": 1.0
     },
-    "mentions_advisor_or_counseling": {
-      "passed": 0,
-      "total": 2,
-      "pass_rate": 0.0
+    "are_course_6": {
+      "passed": 6,
+      "total": 6,
+      "pass_rate": 1.0
     }
   },
   "results": [
     {
       "prompt": "I need a CI-H this semester.",
-      "response": "Based on the course catalog excerpt, I can recommend the following CI-H courses for this semester:\n\n*   **[21L.004] Reading Poetry** - This course focuses on close analysis of poems written in English in various forms (lyric, epic, dramatic). It's a 3-0-9 unit course, and the schedule is Lec: MW 1-2:30 (1-134). The instructors for Fall are N. Jackson and S. Tapscott.\n*   **[21H.161] The Modern Middle East** - This course surveys the history of the Middle East, from the end of the 19th century to the present. It's a 3-0-9 unit course, and the schedule is Lec: MW 12 (32-155) with Rec: R 1 (2-132); R 2 (2-132). The instructor for Spring is L. Ekmekcioglu.\n*   **[STS.003] Ancient Greeks to Modern Geeks: A History of Science** - This course covers the development of major fields in the physical and life sciences, from 18th-century Europe through 20th-century America. It's a 3-0-9 unit course, and the schedule is Lec: MW 3 (5-217) with Rec: F 11 (1-242); F 12 (1-242). The instructor for Spring is D. Kaiser.\n*   **[21L.050] The Personal Essay: Reading Nonfiction** - This course concentrates on the close analysis of nonfiction writing. It's a 3-0-9 unit course, and the schedule is Lec: TR 11-12:30 (4-251). The instructors for Fall and Spring are B. Mangrum.\n*   **[21W.021] Writing and Experience: MIT Inside, Live** - This course acts as participant-observers, investigating MIT's history and culture through visits to the Institute's archives and museums, relevant readings, and depictions of MIT in popular culture. It's a 3-0-9 unit course, and the schedule is Lec: TR 10-11:30 (1-379). The instructor for Fall is J. Graziano.\n*   **[24.00] Problems of Philosophy** - This course introduces the problems of philosophy, focusing on ethics, metaphysics, theory of knowledge, and philosophy of logic, language, and science. It's a 3-0-9 unit course, and the schedule is not specified. The instructors for Fall and Spring are A. Byrne and C. Hare.\n*   **[24.01] Classics of Western Philos",
+      "response": "Based on the course catalog excerpt, I have a few options for you that satisfy the CI-H (Communication Intensive - Humanities) requirement.\n\nHere are a few courses that fit the bill:\n\n- **[21L.004] Reading Poetry**: This course focuses on close analysis of poems written in English, covering various forms and styles. It's a great opportunity to develop your writing and critical thinking skills.\n\n- **[21H.161] The Modern Middle East**: This course surveys the history of the Middle East from the end of the 19th century to the present, examining major political, social, intellectual, and cultural issues. It's a great choice if you're interested in history, politics, and culture.\n\n- **[STS.003] Ancient Greeks to Modern Geeks: A History of Science**: This course covers the development of major fields in the physical and life sciences from 18th-century Europe through 20th-century America. It's a great choice if you're interested in the history of science and its cultural context.\n\n- **[21L.050] The Personal Essay: Reading Nonfiction**: This course focuses on the close analysis of nonfiction writing, exploring various forms and styles. It's a great opportunity to develop your writing and critical thinking skills.\n\n- **[21W.021] Writing and Experience: MIT Inside, Live**: This course allows you to investigate MIT's history and culture through visits to the Institute's archives and museums, relevant readings, and depictions of MIT in popular culture. It's a great choice if you're interested in MIT's history and culture.\n\n- **[24.00] Problems of Philosophy**: This course introduces you to the problems of philosophy, covering topics such as ethics, metaphysics, theory of knowledge, and philosophy of logic, language, and science.\n\n- **[24.01] Classics of Western Philosophy**: This course surveys the Western philosophical tradition through the study of selected major thinkers, covering topics such as Plato, Aristotle, Lucretius, Descartes, Hobbes, Leibniz, Locke, Berkeley, Hume, ",
+      "checks": {
+        "cited_courses_exist": true,
+        "not_overwhelming": true,
+        "explains_recommendations": false,
+        "articulates_tradeoffs": false,
+        "expresses_uncertainty": false,
+        "mentions_departments_or_distributions": true,
+        "recognizes_course_6_or_eecs": false,
+        "have_distribution": true,
+        "suggests_no_results_or_relax": false
+      }
+    },
+    {
+      "prompt": "What CI-H courses are about ethics or technology?",
+      "response": "Based on the COURSE CATALOG EXCERPT provided, here are some CI-H courses that relate to ethics or technology:\n\n1. **[24.00] Problems of Philosophy** - This course covers various philosophical problems, including ethics, and is a CI-H course.\n2. **[ES.112] Philosophy of Love** - This course explores the nature of love through philosophical works and is a CI-H course.\n3. **[STS.002] Finance and Society** - This course examines finance as a social technology and its impact on society, which relates to ethics and technology.\n4. **[STS.034] Science Communication: A Practical Guide** - This course develops students' abilities to communicate about science and technology effectively, which relates to ethics and technology.\n5. **[STS.008] Technology and Experience** - This course examines how technologies shape and are shaped by individual and social relations, perceptions, habits, moods, and sensibilities, which relates to ethics and technology.\n6. **[21W.035] Science Writing and New Media: Elements of Science Writing for the Public** - This course introduces ways of communicating scientific information meaningfully to public audiences, which relates to ethics and technology.\n7. **[21W.031] Science Writing and New Media: Explorations in Communicating about Science and Technology** - This course examines principles of good writing, focusing on those associated with scientific and technical writing, which relates to ethics and technology.\n8. **[24.131] Ethics of Technology** - This course introduces the tools of philosophical ethics through application to contemporary issues concerning technology, which directly relates to ethics and technology.\n\nPlease note that while these courses may not be exclusively about ethics or technology, they all have significant components related to these topics.",
+      "checks": {
+        "cited_courses_exist": true,
+        "not_overwhelming": true,
+        "explains_recommendations": false,
+        "articulates_tradeoffs": false,
+        "expresses_uncertainty": false,
+        "mentions_departments_or_distributions": true,
+        "recognizes_course_6_or_eecs": false,
+        "have_distribution": true,
+        "suggests_no_results_or_relax": false
+      }
+    },
+    {
+      "prompt": "I need a CI-H about AI or tech ethics.",
+      "response": "Based on the course catalog excerpt, I recommend the following courses that satisfy the CI-H (Communication Intensive - writing-intensive HASS subject) and have a focus on AI or tech ethics:\n\n1. **[24.131] Ethics of Technology**: This course introduces the tools of philosophical ethics through application to contemporary issues concerning technology, including AI, automation, and digital ethics. It's a great fit for a CI-H course that explores the ethics of technology.\n2. **[STS.003] Ancient Greeks to Modern Geeks: A History of Science**: While this course may seem unrelated to AI or tech ethics at first glance, it explores the development of major fields in the physical and life sciences, including the history of computing and technology. It could provide a unique perspective on the ethics of science and technology.\n3. **[STS.008] Technology and Experience**: This course examines how technologies shape and are shaped by individual and social relations, perceptions, habits, moods, and sensibilities. It could provide a nuanced understanding of the impact of technology on human experience and potentially touch on AI ethics.\n\nAll of these courses are listed as CI-H and have a focus on technology or ethics, which should satisfy your requirements. However, please note that course availability and schedules may change, so it's always a good idea to check the course catalog or consult with the instructor for the most up-to-date information.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
@@ -94,258 +109,228 @@
       }
     },
     {
-      "prompt": "What CI-H courses are about ethics or technology?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need a CI-H about AI or tech ethics.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
       "prompt": "Which courses satisfy REST?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Based on the provided course catalog excerpt, the following courses satisfy the REST requirement:\n\n1. **[CC.1803] Differential Equations** - Prereqs: None\n2. **[CC.512] Organic Chemistry I** - Prereqs: Chemistry (GIR)\n3. **[5.03] Principles of Inorganic Chemistry I** - Prereqs: 5.12\n4. **[ES.1803] Differential Equations** - Prereqs: None\n5. **[18.032] Differential Equations** - Prereqs: None\n6. **[18.600] Probability and Random Variables** - Prereqs: Calculus II (GIR)\n7. **[22.02] Introduction to Applied Nuclear Physics** - Prereqs: None\n8. **[8.03] Physics III** - Prereqs: Calculus II (GIR), Physics II (GIR)\n\nNote that some of these courses have prerequisites that need to be met, such as Chemistry (GIR) for [CC.512] Organic Chemistry I and Calculus II (GIR) for [18.600] Probability and Random Variables.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
+        "have_distribution": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "I'm looking for REST courses that work with a CS background.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Based on your CS background, I'll recommend REST courses that align with your interests. \n\nFrom the course catalog excerpt, I found the following REST courses that might be relevant:\n\n- **[18.062] Mathematics for Computer Science** (REST): This course covers mathematical tools and proof techniques useful in computer science, including logical notation, sets, relations, and elementary graph theory.\n- **[18.032] Differential Equations** (REST): This course covers differential equations, which are essential in computer science, particularly in fields like machine learning and data analysis.\n- **[18.600] Probability and Random Variables** (REST): This course introduces probability spaces, random variables, and distribution functions, which are crucial in computer science, especially in areas like machine learning and data analysis.\n- **[18.700] Linear Algebra** (REST): This course covers vector spaces, systems of linear equations, and eigenvalues, which are fundamental concepts in computer science, particularly in areas like machine learning and data analysis.\n\nThese courses should be a good starting point for you. However, please note that some of these courses may have prerequisites, so make sure to check the course catalog for any requirements.\n\nIf you have any specific interests or areas within CS that you'd like to explore, I can try to recommend more targeted REST courses.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
+        "have_distribution": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "What HASS-A courses are good for engineers?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "As an engineer, you might find courses that explore the intersection of art, design, and engineering particularly engaging. From the catalog excerpt, here are some HASS-A courses that might interest you:\n\n1. **[4.110] Design Across Scales and Disciplines**: This course explores the relationship between science and engineering through the lens of design. It covers interdisciplinary skills and methods to represent, model, design, and fabricate objects, machines, and systems using new computational and fabrication tools.\n2. **[4.053] Visual Communication Fundamentals**: This course introduces the fundamentals of visual communication, emphasizing the development of a visual and verbal vocabulary. It covers the basics of line, shape, color, composition, visual hierarchy, word/image relationships, and typography as building blocks for communicating with clarity, emotion, and meaning.\n3. **[4.021] Design Studio: How to Design**: This course introduces fundamental design principles as a way to demystify design and provide a basic introduction to all aspects of the process. It stimulates creativity, abstract thinking, representation, iteration, and design development.\n4. **[4.603] Understanding Modern Architecture**: This course examines modern architecture, art, and design in the context of the political, economic, aesthetic, and cultural changes that occurred in the twentieth century. It presents foundational debates about social and technological aspects of modern architecture and the continuation of those debates into contemporary architecture.\n5. **[21T.409] Performance and Design Intensive**: This multidisciplinary, term-long, independent study course is geared toward the development of significant artistic and technical projects in performance and design. Students pursue projects in an array of fields and are invited to propose artistic and research projects as actors, directors, designers, dramaturges, and/or technical designers.\n6. **[21M.302] Harmony and Counterpoi",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
         "explains_recommendations": false,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
+        "have_distribution": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "Do you have any CI-H with an afternoon section?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "After reviewing the course catalog excerpt, I found a few CI-H courses with afternoon sections. However, please note that instructor and schedule information may change, so it's always best to confirm at student.mit.edu/catalog.\n\nHere are the CI-H courses with afternoon sections:\n\n- **[21W.747] Rhetoric** - Lec: MW 9-10.30 (E17-136) - This course has a morning section, but it also has a MW 9-10.30 am section, which is in the morning, not afternoon.\n- **[21.01] Compass Course: Moral and Social Questions about the Human Condition** - Lec: M 7-9 PM (24-121); T 9-11 (4-159); T 12-2 (1-371) - This course has a late evening section, not afternoon.\n- **[21L.004] Reading Poetry** - Lec: MW 1-2.30 (1-134) - This course has a morning section, but it also has a MW 1-2.30 pm section, which is in the afternoon.\n- **[21H.161] The Modern Middle East** - Lec: MW 12 (32-155) - This course has a noon section, which is in the afternoon.\n- **[STS.003] Ancient Greeks to Modern Geeks: A History of Science** - Lec: MW 3 (5-217) - This course has a mid-afternoon section.\n- **[21L.050] The Personal Essay: Reading Nonfiction** - Lec: TR 11-12.30 (4-251) - This course has a late morning section, but it also has a TR 11-12.30 pm section, which is in the afternoon.\n- **[21W.021] Writing and Experience: MIT Inside, Live** - Lec: TR 10-11.30 (1-379) - This course has a late morning section, not afternoon.\n- **[24.00] Problems of Philosophy** - Lec: TR 11 (32-141) - This course has a late morning section, not afternoon.\n- **[24.01] Classics of Western Philosophy** - Lec: TR 11 (32-141) - This course has a late morning section, not afternoon.\n- **[17.41] Introduction to International Relations** - Lec: MW 10 (4-237) - This course has a late morning section, not afternoon.\n- **[ES.112] Philosophy of Love** - Lec: R 1-3 (24-618) - This course has an afternoon section.\n- **[21L.003] Jane Austen: Reading Fiction** - Lec: TR 2.30-4 (5-216) - This course has an afternoon section.\n- **[21M.302] Harmony an",
       "checks": {
         "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
+        "not_overwhelming": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
+        "have_distribution": true,
+        "have_afternoon_option": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "I need to fulfill LAB. What are my options?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "To fulfill the LAB requirement, you can choose from the following courses in the catalog excerpt:\n\n1. **[1.106] Environmental Fluid Mechanics Lab** (Units: 0-4-2, Distributions: LAB, PLAB) - Prereqs: None\n2. **[6.1010] Fundamentals of Programming** (Units: 2-4-6, Distributions: LAB) - Prereqs: 6.1000/(6.100A, (6.100B/16.C20))\n3. **[9.17] Systems Neuroscience Laboratory** (Units: 2-4-6, Distributions: LAB) - Prereqs: 9.01/''permission of instructor''\n4. **[15.417] Laboratory in Investments** (Units: 3-3-9, Distributions: LAB) - Prereqs: None\n5. **[6.2050] Digital Systems Laboratory** (Units: 3-7-2, Distributions: LAB) - Prereqs: 6.1910/''permission of instructor''\n6. **[2.671] Measurement and Instrumentation** (Units: 3-3-6, Distributions: LAB) - Prereqs: Physics II (GIR), 2.001, 2.003, 2.086\n7. **[4.440] Introduction to Structural Design** (Units: 3-3-6, Distributions: LAB) - Prereqs: Calculus II (GIR)\n8. **[1.056] Introduction to Structural Design** (Units: 3-3-6, Distributions: LAB) - Prereqs: Calculus II (GIR)\n9. **[22.09] Nuclear Detection Laboratory** (Units: 1-5-9, Distributions: LAB) - Prereqs: 22.01\n10. **[6.9030] Strobe Project Laboratory** (Units: 2-8-2, Distributions: LAB) - Prereqs: Physics II (GIR)/''permission of instructor''\n11. **[2.008] Design and Manufacturing II** (Units: 3-3-6, Distributions: LAB, PLAB) - Prereqs: 2.007\n\nPlease note that some of these courses have prerequisites, and enrollment may be limited. Be sure to check the catalog for the most up-to-date information and to confirm the availability of each course.",
       "checks": {
         "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
+        "not_overwhelming": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
         "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
+        "recognizes_course_6_or_eecs": true,
         "have_distribution": false,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "REST options that don't require a lot of programming?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Based on the COURSE CATALOG EXCERPT, some REST options that don't require a lot of programming are:\n\n- **[9.01] Introduction to Neuroscience**: This course explores the structure and function of the human brain, covering topics such as the function of nerve cells, sensory systems, control of movement, learning and memory, and diseases of the brain. It doesn't require programming skills.\n- **[7.05] General Biochemistry**: This course covers the contributions of biochemistry to an understanding of the structure and functioning of organisms, tissues, and cells. It includes topics such as the chemistry and functions of constituents of cells and tissues, and the chemical and physical-chemical basis for the structures of nucleic acids, proteins, and carbohydrates. No programming skills are required.\n- **[7.03] Genetics**: This course covers the principles of genetics, including the structure and function of genes, chromosomes, and genomes, as well as biological variation resulting from recombination, mutation, and selection. It doesn't require programming skills.\n- **[21W.775] Writing about Nature and Environmental Issues**: This course focuses on traditional nature writing and the environmentalist essay, and students keep a web log as a journal. It doesn't require programming skills.\n- **[21W.747] Rhetoric**: This course studies the forms and structures of argumentation, including organization of ideas, awareness of audience, methods of persuasion, evidence, factual vs. emotional argument, figures of speech, and historical forms and uses of arguments. It doesn't require programming skills.\n\nPlease note that while these courses may not require a lot of programming, they may still have some computational or data analysis components. However, they are generally more focused on non-technical aspects of science and technology.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
         "explains_recommendations": false,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
+        "have_distribution": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "CI-H that's writing-intensive?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Based on the course catalog excerpt, here are some CI-H (Communication Intensive - writing-intensive) courses that focus on writing:\n\n- **[CC.115] Writing About Big Questions: Defending Poetry** - This course is a CI-H course that focuses on reading and writing skills to analyze challenging texts, including Platonic dialogues, poetic treatises, and creative works.\n- **[21W.775] Writing about Nature and Environmental Issues** - This course is a CI-H course that focuses on traditional nature writing and the environmentalist essay, with students keeping a web log as a journal and writing about various authors.\n- **[21W.021] Writing and Experience: MIT Inside, Live** - This course is a CI-H course that focuses on writing about students' experiences at MIT, exploring topics such as intellectual growth and development, and the influence of place upon one's personality and character.\n- **[21W.735] Writing and Reading the Essay** - This course is a CI-H course that focuses on the close analysis of nonfiction writing, with students considering the literary mode in its historical, artistic, and cultural contexts.\n- **[21W.015] Writing and Rhetoric: Writing about Sports** - This course is a CI-H course that focuses on writing about sports, examining the role of sports in our individual lives and American culture at large.\n- **[21W.778] Science Journalism** - This course is a CI-H course that focuses on writing about science and technology for the general public, with students discussing scientific articles and essays and working in small groups to critique each other's writing.\n- **[21L.050] The Personal Essay: Reading Nonfiction** - This course is a CI-H course that focuses on the close analysis of nonfiction writing, with students considering the literary mode in its historical, artistic, and cultural contexts.\n- **[21W.042] Writing with Shakespeare** - This course is a CI-H course that focuses on writing and speaking using Shakespeare as a model and means for mastery of Eng",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
         "explains_recommendations": false,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
+        "have_distribution": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "Any CI-H in philosophy or political science?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Based on the COURSE CATALOG EXCERPT, here are some CI-H courses in philosophy and political science:\n\n**Philosophy:**\n\n* [24.00] Problems of Philosophy (HASS-H, CI-H)\n* [24.01] Classics of Western Philosophy (HASS-H, CI-H)\n* [24.09] Minds and Machines (HASS-H, CI-H)\n* [24.02] Moral Problems and the Good Life (HASS-H, CI-H)\n* [24.04] Justice (HASS-H, CI-H)\n* [24.908] Creole Languages and Caribbean Identities (HASS-S, CI-H)\n* [24.118] Paradox and Infinity (HASS-H)\n\n**Political Science:**\n\n* [17.20] Introduction to the American Political Process (HASS-S, CI-H)\n* [17.01] Justice (HASS-H, CI-H) (same as 24.04)\n* [17.41] Introduction to International Relations (HASS-S, CI-H)\n* [17.50] Introduction to Comparative Politics (HASS-S, CI-H)\n* [17.30] Making Public Policy (HASS-S, CI-H)\n\nNote that some of these courses may have additional tags or distributions, but they all satisfy the CI-H requirement.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
         "explains_recommendations": false,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "cited_courses_same_department": false,
+        "have_distribution": true,
+        "cited_courses_same_department": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "REST course that fits a Tuesday/Thursday schedule?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Based on the COURSE CATALOG EXCERPT, I found a few REST courses that fit a Tuesday/Thursday schedule:\n\n- **[18.600] Probability and Random Variables**: Lec: TR 9.30-11 (34-101)\n- **[18.032] Differential Equations**: Lec: MWF 1 (2-142) - This one does not fit the Tuesday/Thursday schedule, so I'll exclude it.\n- **[18.700] Linear Algebra**: Lec: MW 9.30-11 (4-159) - This one fits the Tuesday/Thursday schedule.\n- **[18.600] Probability and Random Variables**: Lec: TR 9.30-11 (34-101) - This one fits the Tuesday/Thursday schedule.\n\nPlease note that the instructor and room may change, so it's always best to check the official listing on student.mit.edu/catalog for the most up-to-date information.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
+        "have_distribution": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "I need both CI-H and HASS. What do you recommend?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Based on the course catalog excerpt, I recommend the following courses that satisfy both CI-H and HASS requirements:\n\n1. **[21L.004] Reading Poetry**: This course focuses on close analysis of poems written in English in various forms. It's a great choice for satisfying both CI-H and HASS-H requirements.\n2. **[21H.161] The Modern Middle East**: This course surveys the history of the Middle East from the end of the 19th century to the present. It's a good fit for both CI-H and HASS-H requirements.\n3. **[STS.003] Ancient Greeks to Modern Geeks: A History of Science**: This course covers the development of major fields in the physical and life sciences from 18th-century Europe through 20th-century America. It satisfies both CI-H and HASS-H requirements.\n4. **[21L.050] The Personal Essay: Reading Nonfiction**: This course focuses on the close analysis of nonfiction writing, including memoirs, biographies, and other forms of creative nonfiction. It's a good choice for satisfying both CI-H and HASS-H requirements.\n5. **[21W.021] Writing and Experience: MIT Inside, Live**: This course involves students investigating MIT's history and culture through visits to the Institute's archives and museums. It satisfies both CI-H and HASS-H requirements.\n6. **[24.00] Problems of Philosophy**: This course introduces students to the problems of philosophy, including ethics, metaphysics, theory of knowledge, and philosophy of logic, language, and science. It satisfies both CI-H and HASS-H requirements.\n7. **[24.01] Classics of Western Philosophy**: This course covers the study of selected major thinkers such as Plato, Aristotle, Lucretius, Descartes, Hobbes, Leibniz, Locke, Berkeley, Hume, Kant, Nietzsche, and Marx. It satisfies both CI-H and HASS-H requirements.\n8. **[21L.003] Jane Austen: Reading Fiction**: This course samples prose narrative from different traditions, examining texts that feature distinctive styles and formal rhythms in their social and historical contexts. It satisfi",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
+        "mentions_departments_or_distributions": true,
         "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
+        "have_distribution": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "What are the prerequisites for 6.3900?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "The prerequisites for 6.3900 are (6.1010/6.1210), and (18.03/18.06/18.700/18.C06).",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
         "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
+        "recognizes_course_6_or_eecs": true,
+        "cited_courses_same_department": true,
+        "are_course_6": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "I've taken 18.06 and 6.100A. What can I take next in ML?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "You've taken Linear Algebra (18.06) and Introduction to Computer Science and Programming in Python (6.100A). \n\nConsidering your background, I recommend taking 6.3900 (Introduction to Machine Learning). This course is a natural next step in your ML journey, building on the programming skills you developed in 6.100A and the mathematical foundations you established in 18.06. \n\nBefore enrolling, please note that 6.3900 has prerequisites of (6.1010/6.1210) and (18.03/18.06/18.700/18.C06). Since you've taken 6.100A and 18.06, you should be good to go. However, confirm the prerequisites and course details at student.mit.edu/catalog to ensure accuracy.\n\nAdditionally, you may also consider 6.C011 (Modeling with Machine Learning for Computer Science) in the spring, which is a more in-depth course that focuses on applying machine learning techniques to real-world problems. However, this course has prerequisites of 6.100A, 6.C01, and (6.1200/6.3700), (18.06/18.C06), so you'll need to take 6.C01 first.\n\nLet me know if you have any questions or if there's anything else I can help you with!",
       "checks": {
         "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
+        "not_overwhelming": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
         "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
+        "recognizes_course_6_or_eecs": true,
+        "cited_courses_same_department": true,
+        "are_course_6": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "What do I need before 6.1210?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "According to the course catalog excerpt, the prerequisites for 6.1210 are:\n\n- 6.100A\n- (6.1200/(6.120A, (6.3700/6.3800/18.05/18.600)))\n\nThis means you need to have taken 6.100A and at least one of the following courses: 6.1200, 6.120A, 6.3700, 6.3800, 18.05, or 18.600.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
         "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
+        "recognizes_course_6_or_eecs": true,
+        "cited_courses_same_department": true,
+        "are_course_6": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "I don't have 6.031. What 6-3 courses can I still take?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "Since you don't have 6.031, you can still take other 6-3 courses that don't have 6.031 as a prerequisite. \n\nLet's look at the 6-3 courses in the catalog excerpt:\n\n- 6.1010: Fundamentals of Programming\n- 6.1200J: Introduction to Computational Thinking and Data Science\n- 6.1210: Introduction to Computer Systems\n- 6.1800: Computer Systems Engineering\n- 6.3700: Data Structures and Algorithms\n- 6.3900: Introduction to Algorithms\n\nThese courses do not have 6.031 as a prerequisite. However, please note that some of these courses may have other prerequisites, so be sure to check those carefully.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
         "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
+        "recognizes_course_6_or_eecs": true,
+        "cited_courses_same_department": true,
+        "are_course_6": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "Prereqs for 24.131?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "According to the COURSE CATALOG EXCERPT, there are no prerequisites for [24.131] Ethics of Technology.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
-        "explains_recommendations": false,
+        "explains_recommendations": true,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
         "mentions_departments_or_distributions": false,
@@ -355,23 +340,23 @@
     },
     {
       "prompt": "Can I take 6.046 without 6.006?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "According to the web context, MIT 6.046 focuses on algorithm design and analysis, unlike 6.006 which emphasizes direct algorithm application. 6.046 is more theoretical and mathematical. It's recommended for those interested in algorithm theory.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
         "explains_recommendations": false,
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
+        "mentions_departments_or_distributions": true,
+        "recognizes_course_6_or_eecs": true,
+        "cited_courses_same_department": true,
+        "are_course_6": true,
         "suggests_no_results_or_relax": false
       }
     },
     {
       "prompt": "What's the prerequisite chain for 6.864?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
+      "response": "I don't see 6.864 in the provided course catalog excerpt. However, I do see [MAS.864] The Nature of Mathematical Modeling.",
       "checks": {
         "cited_courses_exist": true,
         "not_overwhelming": true,
@@ -379,1226 +364,9 @@
         "articulates_tradeoffs": false,
         "expresses_uncertainty": false,
         "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need a CI-H in the afternoon.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Only afternoons work for me. What CI-H options are there?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What courses are offered in Spring only?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "offered_in_semester": true,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm free only TR 10\u201312. What fits?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Any good courses that meet once a week?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's offered in Fall that has no Friday class?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "offered_in_semester": true,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need something that doesn't conflict with 18.06.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Afternoon-only options for Course 6?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_afternoon_option": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Compare 6.3900 and 6.4100. Which should I take first?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's the difference between 6.1200 and 6.1210?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "18.06 vs 18.700 for linear algebra?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Should I take 6.036 or 6.3900 for ML?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Compare 24.131 and 17.01 for ethics.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "6.006 vs 6.046 for algorithms?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm a 6-3 junior. What electives do you recommend?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm Course 8. I need a CI-H and prefer afternoon.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "cited_courses_same_department": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "For 6-3 graduation I still need 6.1200 and 6.1210. What order?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "mentions_graduation_or_requirements": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm EECS. What HASS courses fit a technical schedule?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "6-1 senior. What's a good REST?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm a TPP student. What CRE should I take?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Course 2 major looking for a CI-H.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm Course 17. Need a writing-intensive elective.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Tell me about 24.131.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What is 18.06?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Info on 6.1210.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Describe 17.01.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's 6.3900 about?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Tell me about 4.031.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What does 6.036 cover?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Info on 21W.775.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm interested in AI. What should I take?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Good courses for someone interested in systems?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What are the best ML courses at MIT?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I want to do robotics. What's the path?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Recommend something for computational biology.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I like theory. What 6-3 theory courses are there?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's a good first course in economics?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm interested in climate and sustainability. Course suggestions?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Recommend a seminar for freshmen.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need a CI-H this semester, only afternoons, and I'm Course 8.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "cited_courses_same_department": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "6-3 junior, need CI-H, afternoon only, no 6.031.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need REST and I'm only free TR afternoon.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "CI-H that's in the afternoon and has no prereqs.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm Course 6. I need a CI-H and an afternoon slot.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "have_afternoon_option": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Graduate student needing a HASS elective. Prefer small class.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "mentions_graduation_or_requirements": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I want something in AI.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What about ethics?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Recommend a course.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need a HASS.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's good for 6.031?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Do you have anything on NLP?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Something fun for next semester.",
-      "response": "The model is currently busy (503). Please wait a few seconds and try again.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need a REST course that's AI-related, TR-only, and has no programming.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "CI-H in the morning only that's also a seminar.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "6.UAT undergrad thesis course that's not 6.UAT.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm struggling with 6.006. Who can I talk to?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "mentions_advisor_or_counseling": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Who's my advisor for Course 6?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "mentions_advisor_or_counseling": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Where do I check if a course counts for 6-3?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Are there 6.UAT restrictions for 6.1200?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I'm confused about the Communication Requirement.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What 6.xxx courses are offered in Spring?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "offered_in_semester": true,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Easy CI-H for a busy semester?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Recommend 3 courses for a 6-3 sophomore.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's the workload like for 18.06?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Any CI-H that satisfies both HASS-H and CI-H?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Courses similar to 24.131?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What should I take after 6.100A?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Best course to learn Python?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need 9 units of HASS. What do you suggest?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Compare 6.100A and 16.C20.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's a good pairing with 6.1210?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Any evening CI-H options?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Recommend something with no final exam.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What 6-3 courses are most popular?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I want to explore quantum computing. Where do I start?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Any 6.xxx with a project component?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What CI-H is good for pre-med?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "have_distribution": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "Recommend a course that meets MW only.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "What's the difference between 6.100A and 6.100B?",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
-        "suggests_no_results_or_relax": false
-      }
-    },
-    {
-      "prompt": "I need a light class to balance 6.1210.",
-      "response": "Free-tier inference credits are temporarily exhausted (402). Please try again later or check your HuggingFace account.",
-      "checks": {
-        "cited_courses_exist": true,
-        "not_overwhelming": true,
-        "explains_recommendations": false,
-        "articulates_tradeoffs": false,
-        "expresses_uncertainty": false,
-        "mentions_departments_or_distributions": false,
-        "recognizes_course_6_or_eecs": false,
-        "cited_courses_same_department": false,
-        "are_course_6": false,
+        "recognizes_course_6_or_eecs": true,
+        "cited_courses_same_department": true,
+        "are_course_6": true,
         "suggests_no_results_or_relax": false
       }
     }

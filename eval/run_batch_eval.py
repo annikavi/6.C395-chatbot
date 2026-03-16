@@ -17,6 +17,9 @@ from pathlib import Path
 # Add project root for imports
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+
 from eval.get_prompts_100 import get_100_prompts
 from eval.prompt_context import parse_prompt_context, PromptContext
 
@@ -210,7 +213,7 @@ def run_batch_eval(limit: int | None = None, out_path: str | None = None, dry_ru
 
 def main():
     parser = argparse.ArgumentParser(description="Batch eval: 100 prompts → chatbot → quality checks")
-    parser.add_argument("--limit", type=int, default=None, help="Max prompts to run (default: all 100)")
+    parser.add_argument("--limit", type=int, default=20, help="Max prompts to run (default: 20)")
     parser.add_argument("--out", type=str, default=None, help="Output JSON path (default: eval/eval_results.json)")
     parser.add_argument("--dry-run", action="store_true", help="Use 3 synthetic responses only (no API); for testing viz")
     args = parser.parse_args()
