@@ -1,0 +1,8 @@
+check,passed,total,pass_rate_pct
+cited_courses_exist,3,3,100.0
+not_overwhelming,3,3,100.0
+explains_recommendations,2,3,66.7
+articulates_tradeoffs,1,3,33.3
+expresses_uncertainty,1,3,33.3
+mentions_departments_or_distributions,2,3,66.7
+recognizes_course_6_or_eecs,1,3,33.3
